@@ -12,13 +12,6 @@ public class InlineMultiplicationFormulaFactory {
     public Formula createFormula() {
         LOG.info("Create an inlineFormula");
 
-        return new Formula() {
-            @Override
-            public double calculate(int a) {
-                LOG.info("Calculate of inline formula");
-
-                return a * 100;
-            }
-        };
+        return (a) -> (a * 100);
     }
 }
