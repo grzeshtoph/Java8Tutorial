@@ -1,5 +1,6 @@
 package com.java8tutorial.lambdas;
 
+import com.java8tutorial.defaultmethods.Formula;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -10,12 +11,14 @@ import static org.junit.Assert.assertEquals;
 /**
  * Test case for {@link com.java8tutorial.lambdas.SortList}
  */
-public class SortListTest {
+public class SortListAndFormulaTest {
     private List<String> sortedList = Arrays.asList("xena", "peter", "mike", "anna");
+
+    private Formula formula = (a) -> a / 0.5;
 
     @Test
     public void sortOldTest() {
-       assertListIsSorted(new SortList().sortOld());
+        assertListIsSorted(new SortList().sortOld());
     }
 
     @Test
@@ -36,6 +39,12 @@ public class SortListTest {
     @Test
     public void setLambda4Test() {
         assertListIsSorted(new SortList().sortLambda4());
+    }
+
+    @Test
+    public void formulaTest() {
+        assertEquals(300, formula.calculate(150), 0);
+        assertEquals(11, formula.sqrt(121), 0);
     }
 
     private void assertListIsSorted(List<String> result) {
