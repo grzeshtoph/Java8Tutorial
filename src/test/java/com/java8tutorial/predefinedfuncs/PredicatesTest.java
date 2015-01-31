@@ -1,4 +1,4 @@
-package com.java8tutorial.lambdas;
+package com.java8tutorial.predefinedfuncs;
 
 import org.junit.Test;
 

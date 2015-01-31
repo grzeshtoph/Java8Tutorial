@@ -6,9 +6,9 @@ package com.java8tutorial.methodrefs;
 public class Person {
     private String firstName, lastName;
 
-    Person() {}
+    public Person() {}
 
-    Person(String firstName, String lastName) {
+    public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
